@@ -166,7 +166,7 @@ export default function CandidateList({
       <div className="flex items-baseline justify-between border-b pb-3 border-[#1A1A1A] mb-4">
         <div>
           <span className="text-[9px] font-bold uppercase tracking-[0.2em] text-[#1A1A1A]/60 block mb-1">SECTION II // TALENT FILES</span>
-          <h2 className="font-serif font-black text-xl text-[#1A1A1A] tracking-tight">Hồ sơ ứng viên (CV)</h2>
+          <h2 className="font-serif font-black text-xl text-[#1A1A1A] tracking-tight">Candidate Profiles (CV)</h2>
         </div>
         {candidates.length > 0 && (
           <button
@@ -186,7 +186,7 @@ export default function CandidateList({
           id="btn-load-samples"
         >
           <Sparkles className="w-4 h-4" />
-          <span>Mẫu: Nạp nhanh 3 ứng viên mẫu</span>
+          <span>Samples: Load 3 Candidates</span>
         </button>
       </div>
 
@@ -216,7 +216,7 @@ export default function CandidateList({
           <UploadCloud className="w-4 h-4" />
         </div>
         <div>
-          <p className="text-xs font-bold uppercase tracking-wide text-[#1A1A1A]">Chọn hoặc thả hồ sơ ở đây</p>
+          <p className="text-xs font-bold uppercase tracking-wide text-[#1A1A1A]">Select or drop files here</p>
           <p className="text-[10px] text-[#1A1A1A]/70 font-mono mt-0.5">SUPPORTED: PDF, TXT, MD</p>
         </div>
       </div>
@@ -226,8 +226,8 @@ export default function CandidateList({
         {candidates.length === 0 ? (
           <div className="text-center py-10 text-[#1A1A1A]/60 flex flex-col items-center justify-center h-full border border-dashed border-[#1A1A1A]/40 bg-white/40">
             <FileText className="w-8 h-8 text-[#1A1A1A]/30 mb-2" />
-            <p className="text-xs font-bold uppercase tracking-widest">Chưa nạp ứng viên</p>
-            <p className="text-[10px] italic font-serif mt-1 max-w-[200px]">Hãy kéo tệp CV vào hoặc bấm nút tải ứng viên mẫu bên trên.</p>
+            <p className="text-xs font-bold uppercase tracking-widest">No candidates loaded</p>
+            <p className="text-[10px] italic font-serif mt-1 max-w-[200px]">Drop CV files or use sample candidates button above.</p>
           </div>
         ) : (
           <AnimatePresence initial={false}>
@@ -270,21 +270,21 @@ export default function CandidateList({
                       <div className="flex items-center gap-1.5 mt-1">
                         {cand.status === "idle" && (
                           <span className="text-[9px] font-bold uppercase tracking-wider text-[#1A1A1A]/70 bg-[#F9F7F2] border border-[#1A1A1A]/30 px-1 py-0.2">
-                            Đang chờ lọc
+                            Pending
                           </span>
                         )}
                         {cand.status === "scanning" && (
                           <span className="text-[9px] font-serif font-bold text-amber-900 bg-amber-100 border border-amber-400 px-1 py-0.2 flex items-center gap-1 animate-pulse">
                             <Loader2 className="w-3 h-3 animate-spin" />
-                            Đang xử lý...
+                            Processing...
                           </span>
                         )}
                         {cand.status === "success" && cand.results && (
                           <div className="flex items-center gap-1.5">
                             <span className={`text-[9px] font-bold uppercase tracking-tighter px-1.5 py-0.2 border border-[#1A1A1A] ${
-                              cand.results.recommendation === "Phù hợp"
+                              cand.results.recommendation === "Suitable"
                                 ? "bg-[#E1F2E5] text-emerald-800"
-                                : cand.results.recommendation === "Cân nhắc"
+                                : cand.results.recommendation === "Consider"
                                 ? "bg-[#F5E6CC] text-amber-950"
                                 : "bg-rose-100 text-rose-800"
                             }`}>
@@ -298,7 +298,7 @@ export default function CandidateList({
                         {cand.status === "error" && (
                           <span className="text-[9px] font-bold text-rose-800 bg-rose-100 border border-rose-300 px-1 py-0.2 flex items-center gap-0.5">
                             <AlertCircle className="w-2.5 h-2.5" />
-                            Lỗi
+                            Error
                           </span>
                         )}
                       </div>
@@ -317,7 +317,7 @@ export default function CandidateList({
                         className={`text-white bg-[#1A1A1A] hover:bg-white hover:text-[#1A1A1A] border border-[#1A1A1A] p-0.5 transition duration-200 cursor-pointer ${
                           isAnyScanning ? "opacity-30 pointer-events-none" : ""
                         }`}
-                        title="Bắt đầu sàng lọc hồ sơ này"
+                        title="Start candidate screening"
                         type="button"
                       >
                         <ChevronRight className="w-4 h-4" />
@@ -328,7 +328,7 @@ export default function CandidateList({
                     <button
                       onClick={(e) => handleDeleteCandidate(cand.id, e)}
                       className="text-[#1A1A1A]/40 hover:text-rose-700 p-1.5 hover:bg-white/70 transition ml-1 cursor-pointer"
-                      title="Xóa hồ sơ"
+                      title="Delete profile"
                       type="button"
                     >
                       <Trash2 className="w-3.5 h-3.5" />
@@ -342,7 +342,7 @@ export default function CandidateList({
       </div>
 
       <div className="mt-auto pt-3 border-t border-[#1A1A1A]/20 text-[9px] text-[#1A1A1A]/60 italic font-serif">
-        * Bấm vào nút mũi tên của từng ứng viên để sàng lọc ngay, hoặc bấm nút sàng lọc tất cả ngoài màn hình chính để đối so sánh đồng loạt.
+        * Click the arrow button of an individual candidate to screen, or use the mass screening button in the dashboard to analyze all candidates.
       </div>
     </div>
   );

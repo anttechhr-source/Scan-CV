@@ -31,7 +31,7 @@ export default function JDInput({
       <div className="flex items-baseline justify-between border-b pb-3 border-[#1A1A1A] mb-4">
         <div>
           <span className="text-[9px] font-bold uppercase tracking-[0.2em] text-[#1A1A1A]/60 block mb-1">SECTION I // REQUIREMENT</span>
-          <h2 className="font-serif font-black text-xl text-[#1A1A1A] tracking-tight">Mô tả công việc (JD)</h2>
+          <h2 className="font-serif font-black text-xl text-[#1A1A1A] tracking-tight">Job Description (JD)</h2>
         </div>
         <span className="text-[10px] font-bold font-mono text-white bg-[#1A1A1A] px-2 py-0.5 tracking-wider uppercase">
           {wordCount} Words
@@ -42,7 +42,7 @@ export default function JDInput({
       <div className="mb-5">
         <label className="text-[10px] font-bold uppercase tracking-widest text-[#1A1A1A] mb-2.5 block flex items-center gap-1">
           <Sparkles className="w-3.5 h-3.5 text-[#1A1A1A]" />
-          <span>Mẫu tuyển dụng nhanh:</span>
+          <span>Quick Selection Templates:</span>
         </label>
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-2">
           {JD_TEMPLATES.map((tpl) => (
@@ -71,7 +71,7 @@ export default function JDInput({
             setJdText(e.target.value);
             setSelectedJdId(""); // reset
           }}
-          placeholder="Hãy dán nội dung tuyển dụng (JD) chi tiết vào đây..."
+          placeholder="Paste detailed job description (JD) here..."
           className="w-full flex-1 p-4 bg-white text-[#1A1A1A] text-sm border-2 border-[#1A1A1A] focus:outline-hidden focus:ring-1 focus:ring-[#1A1A1A] transition resize-none font-sans leading-relaxed"
           id="jd-textarea"
         />
@@ -79,7 +79,7 @@ export default function JDInput({
 
       <div className="mt-3 flex items-start gap-1 pb-1">
         <span className="text-[10px] leading-relaxed italic text-[#1A1A1A]/70 font-serif">
-          * Bạn có thể tự do chỉnh sửa trực tiếp thông tin khung năng lực trong hộp văn bản bên trên để AI tiến hành lọc sát nhất.
+          * You can edit JD content directly to ensure AI analysis is precise.
         </span>
       </div>
     </div>

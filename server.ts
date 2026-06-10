@@ -47,25 +47,25 @@ async function startServer() {
       const parts: any[] = [];
 
       // Add JD prompt details
-      const instructionsPrompt = `Bạn là một chuyên gia tuyển dụng cao cấp (Technical Recruiter / HR Specialist) xuất sắc tại Việt Nam. 
-Nhiệm vụ của bạn là phân tích, so sánh chi tiết Hồ sơ ứng viên (CV) sau đây với Mô tả công việc (JD) được cung cấp, sau đó đánh giá độ tương thích, các điểm mạnh/yếu, kỹ năng khớp/thiếu, đề xuất câu hỏi phỏng vấn đặc thù và đưa ra kết luận sàng lọc rõ ràng.
+      const instructionsPrompt = `You are an expert Technical Recruiter.
+Your task is to analyze, compare, and screen the following Candidate CV against the provided Job Description (JD), evaluate compatibility, identify strengths/weaknesses (skills matched/missing), suggest specific interview questions, and provide a clear screening conclusion.
 
-[THÔNG TIN MÔ TẢ CÔNG VIỆC (JD)]
+[JOB DESCRIPTION (JD)]
 ${jdText}
 
-[YÊU CẦU ĐÁNH GIÁ CHUYÊN SÂU]
-- Đối chiếu kĩ chuyên môn, số năm kinh nghiêm, kỹ năng cụ thể được ghi trong CV so với JD.
-- Đánh giá khách quan, trung thực, không thiên vị.
-- Điểm số thang 100 gồm:
-  + matchScore: Điểm hòa hợp chung
-  + technicalScore: Điểm kỹ năng chuyên môn
-  + experienceScore: Điểm bề dày/chất lượng kinh nghiệm thực tế
-  + educationScore: Điểm học vấn, trường lớp và chứng chỉ liên quan
-- Chia loại sàng lọc thành một trong ba nhãn:
-  + "Phù hợp": khi Điểm hòa hợp chung (matchScore) >= 80 điểm.
-  + "Cân nhắc": khi Điểm hòa hợp chung (matchScore) từ 50 đến 79 điểm.
-  + "Không phù hợp": khi Điểm hòa hợp chung (matchScore) dưới 50 điểm.
-- Viết tất cả các nội dung phân tích bằng tiếng Việt tự nhiên, chuyên nghiệp và súc tích.`;
+[EVALUATION REQUIREMENTS]
+- Objectively compare technical expertise, years of experience, and specific skills in the CV against the JD.
+- Provide objective assessments.
+- Scores (0-100) include:
+  + matchScore: Overall fit
+  + technicalScore: Technical/skill competence
+  + experienceScore: Work experience relevance
+  + educationScore: Education and certifications relevance
+- Screening recommendation labels:
+  + "Suitable": When matchScore >= 80.
+  + "Consider": When matchScore is 50-79.
+  + "Not Suitable": When matchScore < 50.
+- Provide all analysis and summaries in professional English.`;
 
       parts.push({ text: instructionsPrompt });
 
@@ -107,76 +107,76 @@ ${cv.textContent}`,
             properties: {
               candidateName: {
                 type: Type.STRING,
-                description: "Họ và tên của ứng viên, trích xuất chuẩn xác từ CV. Ví dụ: Nguyễn Văn A. Nếu hoàn toàn không thể tìm thấy tên ứng viên, dùng tên file hoặc 'Ứng viên " + cv.id + "'"
+                description: "Full name of the candidate, extracted accurately from the CV. If name cannot be found, use filename or 'Candidate ' + cv.id"
               },
               email: { 
                 type: Type.STRING, 
-                description: "Địa chỉ Email liên lạc trích xuất từ CV. Ví dụ: nguyenvana@gmail.com. Trả về chuỗi rỗng nếu không tìm thấy." 
+                description: "Contact email from CV. Return empty string if not found." 
               },
               phone: { 
                 type: Type.STRING, 
-                description: "Số điện thoại di động trích xuất từ CV. Trả về chuỗi rỗng nếu không tìm thấy." 
+                description: "Mobile phone number from CV. Return empty string if not found." 
               },
               yearsOfExperience: { 
                 type: Type.NUMBER, 
-                description: "Số năm kinh nghiệm làm việc ước tính từ CV (ví dụ: 3.5 hoặc 5). Nếu thiếu thông tin, ước lượng hợp lý nhất." 
+                description: "Estimated years of experience from CV (e.g., 3.5 or 5). If insufficient, provide best reasonable estimate." 
               },
               education: { 
                 type: Type.STRING, 
-                description: "Thông tin học vị / trường đại học cao nhất tiêu biểu. Ví dụ: Cử nhân Công nghệ thông tin - Đại học Bách Khoa Hà Nội" 
+                description: "Highest education level/degree/university. E.g., Bachelor of IT - Hanoi University of Science and Technology" 
               },
               matchScore: { 
                 type: Type.INTEGER, 
-                description: "Điểm tương tích chung từ 0 đến 100 phù hợp chặt chẽ với nhãn sàng lọc ứng viên." 
+                description: "Overall compatibility score from 0-100 aligned with recommendation label." 
               },
               technicalScore: { 
                 type: Type.INTEGER, 
-                description: "Điểm kỹ năng công nghệ / chuyên môn thực hành của ứng viên từ 0 đến 100." 
+                description: "Candidate's technical skill/competency score from 0-100." 
               },
               experienceScore: { 
                 type: Type.INTEGER, 
-                description: "Điểm mức độ phù hợp của quá trình và thời gian làm việc từ 0 đến 100." 
+                description: "Score representing relevance and quality of work experience from 0-100." 
               },
               educationScore: { 
                 type: Type.INTEGER, 
-                description: "Điểm mức độ liên quan của học vấn, bằng cấp, chứng chỉ từ 0 đến 100." 
+                description: "Score representing relevance of education, degrees, and certificates from 0-100." 
               },
               summary: { 
                 type: Type.STRING, 
-                description: "Tóm tắt đánh giá tổng quan, cô đọng về thế mạnh bổ trợ và năng lực cốt lõi của ứng viên này (tối đa 3 câu)." 
+                description: "Concise overall assessment summary of the candidate's core strengths and professional value (max 3 sentences)." 
               },
               technicalSkillsMatched: {
                 type: Type.ARRAY,
                 items: { type: Type.STRING },
-                description: "Mảng danh sách các kỹ năng/công cụ chuyên môn của ứng viên khớp xuất sắc với đòi hỏi của JD."
+                description: "List of candidate's skills that excel with JD requirements."
               },
               technicalSkillsMissing: {
                 type: Type.ARRAY,
                 items: { type: Type.STRING },
-                description: "Mảng danh sách các kỹ năng quan trọng trong JD nhưng ứng viên hoàn toàn thiếu hoặc không được thể hiện trong CV."
+                description: "List of key skills in JD that the candidate misses or are not evident in CV."
               },
               strengths: {
                 type: Type.ARRAY,
                 items: { type: Type.STRING },
-                description: "3 ưu điểm vượt trội hoặc điểm sáng nổi bật biểu trưng phù hợp với vị trí."
+                description: "3 standout strengths or highlights relevant to the position."
               },
               weaknesses: {
                 type: Type.ARRAY,
                 items: { type: Type.STRING },
-                description: "Các điểm yếu, khoảng cách khoảng trống kỹ năng cần xem xét hoặc lưu ý từ CV."
+                description: "Areas for concern, skill gaps, or notes from CV to consider."
               },
               interviewQuestions: {
                 type: Type.ARRAY,
                 items: { type: Type.STRING },
-                description: "3 câu hỏi đào sâu hoặc chất vấn lý tưởng trong buổi phỏng vấn trực tiếp phù hợp với CV này để phân minh kỹ năng thiếu sót hoặc khẳng định kinh nghiệm."
+                description: "3 ideal technical or behavioral interview questions specifically tailored to probing CV gaps or verifying experience."
               },
               recommendation: {
                 type: Type.STRING,
-                description: "Kết quả phân loại sàng lọc cuối cùng. Bắt buộc là một trong 3 từ khóa tiếng Việt: 'Phù hợp', 'Cân nhắc', 'Không phù hợp'"
+                description: "Final screening result. Must be one of: 'Suitable', 'Consider', 'Not Suitable'"
               },
               reason: {
                 type: Type.STRING,
-                description: "Lý do súc tích cho khuyến nghị sàng lọc này bằng tiếng Việt (1-2 câu)."
+                description: "Concise reason for this recommendation in English (1-2 sentences)."
               }
             },
             required: [
@@ -232,7 +232,7 @@ ${cv.textContent}`,
   }
 
   app.listen(PORT, "0.0.0.0", () => {
-    console.log(`[Fullstack Server] Server đang chạy trên cổng: ${PORT}`);
+    console.log(`[Fullstack Server] Server running on port: ${PORT}`);
   });
 }
 

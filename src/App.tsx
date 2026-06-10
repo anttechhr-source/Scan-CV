@@ -166,7 +166,7 @@ Chúng tôi đang tìm kiếm Lập trình viên Frontend (ReactJS / Next.js) gi
             CV/MATCH <span className="font-serif italic font-normal text-3xl lowercase">intelligence</span>
           </h1>
           <p className="text-[10px] md:text-xs font-bold uppercase tracking-[0.2em] text-[#1A1A1A]/70 mt-1">
-            HỆ THỐNG SÀNG LỌC & SO SÁNH HỒ SƠ TỰ ĐỘNG BẰNG AI GEMINI FLASH 3.5
+            AI-POWERED AUTOMATED CV/JD MATCHING & SCREENING SYSTEM
           </p>
         </div>
         
@@ -227,7 +227,7 @@ Chúng tôi đang tìm kiếm Lập trình viên Frontend (ReactJS / Next.js) gi
                     : "bg-white text-[#1A1A1A] border-[#1A1A1A]/30 hover:border-[#1A1A1A]"
                 }`}
               >
-                Chi tiết đánh giá
+                Analysis Details
               </button>
               <button
                 onClick={() => setActiveTab("matrix")}
@@ -237,7 +237,7 @@ Chúng tôi đang tìm kiếm Lập trình viên Frontend (ReactJS / Next.js) gi
                     : "bg-white text-[#1A1A1A] border-[#1A1A1A]/30 hover:border-[#1A1A1A]"
                 }`}
               >
-                Bảng so sánh đối chiếu ({candidates.filter(c => c.status === "success").length})
+                Comparison Matrix ({candidates.filter(c => c.status === "success").length})
               </button>
             </div>
 
@@ -253,12 +253,12 @@ Chúng tôi đang tìm kiếm Lập trình viên Frontend (ReactJS / Next.js) gi
                 {isAnyScanning ? (
                   <>
                     <RefreshCw className="w-4 h-4 animate-spin text-[#1A1A1A]" />
-                    <span>Đang tiến hành lọc...</span>
+                    <span>Screening in progress...</span>
                   </>
                 ) : (
                   <>
                     <Sparkles className="w-4 h-4 text-amber-700" />
-                    <span>Sàng lọc ứng viên đồng loạt ({candidates.filter(c => c.status !== "success").length})</span>
+                    <span>Screen all candidates ({candidates.filter(c => c.status !== "success").length})</span>
                   </>
                 )}
               </button>
@@ -271,9 +271,9 @@ Chúng tôi đang tìm kiếm Lập trình viên Frontend (ReactJS / Next.js) gi
               {!activeCandidate ? (
                 <div className="flex-1 flex flex-col items-center justify-center py-20 text-[#1A1A1A]/40 min-h-[300px] border-2 border-dashed border-[#1A1A1A]/30 bg-[#F9F7F2]/30 p-6 text-center">
                   <FileText className="w-12 h-12 text-[#1A1A1A]/20 mb-3" />
-                  <h3 className="font-serif font-black text-lg text-[#1A1A1A] uppercase tracking-wider">Chưa chọn tệp ứng viên</h3>
+                  <h3 className="font-serif font-black text-lg text-[#1A1A1A] uppercase tracking-wider">No candidate selected</h3>
                   <p className="text-xs italic font-serif mt-1 max-w-sm text-[#1A1A1A]/70">
-                    Vui lòng tải lên tài liệu CV bằng tệp tin hoặc chọn một ứng viên trong danh bạ bên trái để xem phân tích chi tiết.
+                    Please upload a CV document or select a candidate from the sidebar to view detailed AI analysis.
                   </p>
                 </div>
               ) : (
