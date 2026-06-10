@@ -3,198 +3,198 @@ import { JDTemplate } from "../types";
 export const JD_TEMPLATES: JDTemplate[] = [
   {
     id: "react-dev",
-    title: "Lập trình viên Frontend (ReactJS / Next.js) - Junior/Mid",
-    department: "Phòng Công nghệ và Phát triển sản phẩm",
-    fullText: `[MÔ TẢ CÔNG VIỆC]
-Chúng tôi đang tìm kiếm Lập trình viên Frontend (ReactJS / Next.js) gia nhập đội ngũ để phát triển các sản phẩm ứng dụng Web thông minh, chất lượng cao.
+    title: "Frontend Developer (ReactJS / Next.js) - Junior/Mid",
+    department: "Technology & Product Development",
+    fullText: `[JOB DESCRIPTION]
+We are seeking a Frontend Developer (ReactJS / Next.js) to join our team and develop high-quality, intelligent Web applications.
 
-[NHIỆM VỤ CHÍNH]
-- Thiết kế, phát triển và tối ưu giao diện web sử dụng ReactJS, Next.js và Tailwind CSS.
-- Chuyển đổi các bản thiết kế Figma thành mã HTML/CSS/React động, sạch sẽ và có thể tái sử dụng.
-- Phối hợp chặt chẽ với Backend Engineers để tích hợp API Restful/GraphQL.
-- Tối ưu hóa hiệu suất ứng dụng nhằm nâng cao trải nghiệm người dùng và SEO.
-- Tham gia trực tiếp vào quy trình Code Review nhằm cải tiến tiêu chuẩn kỹ thuật.
+[KEY RESPONSIBILITIES]
+- Design, develop, and optimize web interfaces using ReactJS, Next.js, and Tailwind CSS.
+- Convert Figma designs into clean, reusable, and dynamic HTML/CSS/React code.
+- Collaborate closely with Backend Engineers to integrate RESTful/GraphQL APIs.
+- Optimize application performance to enhance user experience and SEO.
+- Actively participate in Code Reviews to improve technical standards.
 
-[YÊU CẦU CÔNG VIỆC]
-- Có ít nhất 1.5 - 3 năm kinh nghiệm lập trình chuyên môn sản phẩm Frontend.
-- Nắm vững JavaScript (ES6+), TypeScript, ReactJS (Hooks, Context API, state management).
-- Có kinh nghiệm làm việc với Next.js (App Router, Server Components) là lợi thế lớn.
-- Sử dụng thành thạo Tailwind CSS và các thư viện UI phổ biến.
-- Biết cách tối ưu hóa hiệu năng render, cache, SEO cơ bản.
-- Có tư duy thiết kế tốt, tỉ mỉ về khoảng cách, căn lề và tương tác.
-- Có kỹ năng sử dụng Git, làm việc theo mô hình Agile/Scrum.
+[REQUIREMENTS]
+- At least 1.5 - 3 years of professional experience in Frontend product development.
+- Proficient in JavaScript (ES6+), TypeScript, ReactJS (Hooks, Context API, state management).
+- Experience with Next.js (App Router, Server Components) is a strong advantage.
+- Expert-level proficiency in Tailwind CSS and common UI libraries.
+- Understanding of render performance optimization, caching, and basic SEO.
+- Strong design mindset, meticulous about spacing, alignment, and interactions.
+- Proficient in Git and working in an Agile/Scrum environment.
 
-[QUYỀN LỢI & PHÚC LỢI]
-- Mức lương cạnh tranh: 15.000.000đ - 25.000.000đ tùy theo năng lực.
-- Lương tháng 13 + thưởng hiệu quả sản phẩm.
-- Bảo hiểm đầy đủ, hỗ trợ cơm trưa, teambuilding thường niên.
-- Làm việc môi trường trẻ trung, sáng tạo, giờ giấc linh hoạt.`
+[BENEFITS]
+- Competitive salary: 15,000,000 VND - 25,000,000 VND based on competence.
+- 13th-month salary + performance bonuses.
+- Full benefits, lunch support, annual teambuilding.
+- Creative and youthful working environment, flexible hours.`
   },
   {
     id: "ba-mid",
-    title: "Nhân viên Phân tích nghiệp vụ (Business Analyst) - Mid-Senior",
-    department: "Khối Quản trị Dự án và Sản phẩm",
-    fullText: `[MÔ TẢ CÔNG VIỆC]
-Chúng tôi cần tuyển dụng 01 Business Analyst (BA) để làm cầu nối cốt lõi giữa khách hàng doanh nghiệp và đội ngũ phát triển kỹ thuật trong việc xây dựng hệ thống phần mềm SaaS.
+    title: "Business Analyst (BA) - Mid-Senior",
+    department: "Project & Product Management",
+    fullText: `[JOB DESCRIPTION]
+We are looking for a Business Analyst (BA) to act as a core bridge between business clients and the technical development team in building SaaS software systems.
 
-[NHIỆM VỤ CHÍNH]
-- Gặp gỡ, thảo luận và thu thập yêu cầu từ đại diện nghiệp vụ, cơ quan đối tác.
-- Phân tích yêu cầu, xây dựng tài liệu đặc tả nghiệp vụ (SRS), URD, vẽ sơ đồ quy trình nghiệp vụ (UML, Use Case, Activity Diagram, Sequence Diagram).
-- Thực hiện thiết kế Wireframe/Prototype cơ bản trên Figma hoặc Balsamiq đề xuất luồng ứng dụng.
-- Tham gia quản lý backlog, lập kế hoạch sprint và chuyển giao yêu cầu rõ nghĩa cho Developer/QA.
-- Hỗ trợ nghiệm thu sản phẩm (UAT) trước khi chính thức phát hành.
+[KEY RESPONSIBILITIES]
+- Meet, discuss, and gather requirements from business representatives and partners.
+- Analyze requirements, build business requirement specifications (SRS), URD, and draw business process diagrams (UML, Use Case, Activity Diagram, Sequence Diagram).
+- Design basic Wireframe/Prototype on Figma or Balsamiq to propose application flows.
+- Participate in backlog management, sprint planning, and translate requirements for Developers/QA.
+- Assist in product acceptance (UAT) before official release.
 
-[YÊU CẦU CÔNG VIỆC]
-- Tối thiểu 3 năm kinh nghiệm ở vị trí Business Analyst (BA) hoặc Product Owner trong ngành Phần mềm.
-- Có khả năng giao tiếp khéo léo, phân tích và phản biện logic tốt.
-- Thành thạo công cụ vẽ sơ đồ và đặc tả yêu cầu: Jira, Confluence, Draw.io, Visio.
-- Hiểu biết sâu sắc về vòng đời phần mềm (SDLC) và mô hình Scrum/Agile.
-- Ưu tiên ứng viên có tiếng Anh tốt (đọc hiểu tài liệu chuyên ngành, viết mail, trao đổi công việc).
-- Có hiểu biết kỹ thuật cơ bản (Database, SQL Queries, RESTful API) là lợi thế lớn để giao tiếp với DEV.
+[REQUIREMENTS]
+- Minimum 3 years of experience as a Business Analyst (BA) or Product Owner in the software industry.
+- Strong communication, analytical, and logical argumentation skills.
+- Proficient in diagramming and specification tools: Jira, Confluence, Draw.io, Visio.
+- Deep understanding of software development life cycle (SDLC) and Scrum/Agile models.
+- Good English communication (professional document reading, writing emails, discussing tasks).
+- Basic technical understanding (Database, SQL Queries, RESTful API) is a major advantage for collaborating with DEV.
 
-[QUYỀN LỢI & PHÚC LỢI]
-- Thu nhập hấp dẫn: 22.000.000đ - 35.000.000đ + trợ cấp ngoại ngữ.
-- Cơ hội thăng tiến lên Product Manager.
-- Xét tăng lương 2 lần/năm, gói chăm sóc sức khỏe cao cấp.`
+[BENEFITS]
+- Attractive income: 22,000,000 VND - 35,000,000 VND + language allowance.
+- Opportunities for promotion to Product Manager.
+- Salary review twice/year, premium health check packages.`
   },
   {
     id: "ai-engineer",
-    title: "Kỹ sư Trí tuệ nhân tạo (AI / Machine Learning Engineer)",
-    department: "Trung tâm Nghiên cứu Ứng dụng AI",
-    fullText: `[MÔ TẢ CÔNG VIỆC]
-Tham gia vào các dự án chiến lược nghiên cứu, tích hợp các mô hình Generative AI (LLMs, Diffusion) và hệ thống phân tích dữ liệu lớn phục vụ giải pháp chuyển đổi số doanh nghiệp.
+    title: "AI / Machine Learning Engineer",
+    department: "AI Research & Application Center",
+    fullText: `[JOB DESCRIPTION]
+Join strategic research projects, integrating Generative AI models (LLMs, Diffusion) and big data analytical systems for corporate digital transformation solutions.
 
-[NHIỆM VỤ CHÍNH]
-- Nghiên cứu, thiết kế và phát triển các mô hình học máy (Deep Learning, NLP, Computer Vision).
-- Fine-tune, tối ưu hóa các dòng mô hình ngôn ngữ lớn (LLMs như Llama, Gemma, Mistral) và huấn luyện RAG (Retrieval-Augmented Generation).
-- Đóng gói và phát hành ứng dụng AI dưới dạng API (FastAPI, Flask) để tích hợp vào Web/App.
-- Trích xuất lý giải, dán nhãn dữ liệu và đào tạo định hình kiến trúc xử lý thông tin.
+[KEY RESPONSIBILITIES]
+- Research, design, and develop machine learning models (Deep Learning, NLP, Computer Vision).
+- Fine-tune and optimize Large Language Models (LLMs like Llama, Gemma, Mistral) and train RAG (Retrieval-Augmented Generation).
+- Package and deploy AI applications as APIs (FastAPI, Flask) for integration into Web/App.
+- Interpret results, label data, and train information processing architectures.
 
-[YÊU CẦU CÔNG VIỆC]
-- Tốt nghiệp đại học hoặc thạc sĩ chuyên ngành CNTT, Khoa học Máy tính, Toán tin hoặc tương đương.
-- Tối thiểu 2 năm kinh nghiệm làm việc thực tế với Python và các thư viện học máy: TensorFlow, PyTorch, Scikit-learn.
-- Có kinh nghiệm thực chiến phát triển ứng dụng Generative AI sử dụng thư viện LangChain, LlamaIndex, kết nối Vector Database (Pinecone, Chroma, Milvus).
-- Thành thạo SQL/NoSQL, xử lý dữ liệu và triển khai trên hạ tầng Docker, cloud (AWS, GCP).
-- Có khả năng đọc hiểu tốt tài liệu khoa học hàng đầu (arXiv), nắm vững kiến trúc Transformers.
+[REQUIREMENTS]
+- Bachelor's or Master's degree in IT, Computer Science, Math, or equivalent.
+- Minimum 2 years of practical experience with Python and ML libraries: TensorFlow, PyTorch, Scikit-learn.
+- Proven experience developing Generative AI applications using LangChain, LlamaIndex, and Vector Database connectivity (Pinecone, Chroma, Milvus).
+- Proficient in SQL/NoSQL, data processing, and deployment on Docker, cloud infrastructure (AWS, GCP).
+- Ability to read and understand top-tier scientific papers (arXiv), strong grasp of Transformers architecture.
 
-[QUYỀN LỢI & PHÚC LỢI]
-- Thu nhập xứng tầm: 30.000.000đ - 55.000.000đ dựa vào năng lực chuyên môn.
-- Thưởng nghiên cứu khoa học, bằng sáng chế.
-- Tài trợ 100% học phí thi các chứng chỉ AWS, Google Cloud, AI.`
+[BENEFITS]
+- Compensation commensurate with ability: 30,000,000 VND - 55,000,000 VND.
+- Scientific research bonuses, patent bonuses.
+- 100% funding for AWS, Google Cloud, AI certification exams.`
   }
 ];
 
 export const SAMPLE_CVS = [
   {
     id: "sample-cv-web-triet",
-    name: "Nguyễn Minh Triết",
+    name: "Nguyen Minh Triet",
     fileName: "CV_NguyenMinhTriet_Frontend.txt",
     fileType: "text",
-    textContent: `HỌ VÀ TÊN: NGUYỄN MINH TRIẾT
-Vị trí mong muốn: Frontend Developer (ReactJS / Next.js)
-Số điện thoại: 0987.654.321
+    textContent: `FULL NAME: NGUYEN MINH TRIET
+Target Position: Frontend Developer (ReactJS / Next.js)
+Phone: 0987.654.321
 Email: minhtriet.dev@gmail.com
-Địa chỉ: Quận Bình Thạnh, TP. Hồ Chí Minh
-Website cá nhân: minhtriet.io | GitHub: github.com/trietdev
+Address: Binh Thanh District, Ho Chi Minh City
+Personal Website: minhtriet.io | GitHub: github.com/trietdev
 
-TÓM TẮT:
-Tôi là một lập trình viên Frontend đam mê tạo dựng giao diện web mượt mà, phản hồi tốt và tối ưu hóa tối đa trải nghiệm người dùng. Với hơn 2.5 năm kinh nghiệm làm việc trực tiếp với ReactJS, Next.js và Tailwind CSS, tôi tự tin thiết kế những sản phẩm chất lượng cao, đúng chuẩn UI/UX từ Figma.
+SUMMARY:
+A Frontend developer passionate about creating smooth, responsive web interfaces and maximizing user experience. With over 2.5 years of hands-on experience in ReactJS, Next.js, and Tailwind CSS, I am confident in designing high-quality products, strictly following UI/UX from Figma.
 
-KỸ NĂNG:
-- Chuyên môn chính: JavaScript (ES6+), TypeScript, HTML5, CSS3, Tailwind CSS.
-- Framework/Thư viện: ReactJS (Hooks, Redux Toolkit, Context API), Next.js (App Router, Server Actions, Server-Side Rendering).
-- Công cụ: Git, VSCode, Figma, Webpack, ESLint, Postman.
-- Kỹ năng mềm: Làm việc nhóm bằng Scrum/Agile, giải quyết vấn đề hiệu quả, tư duy thẩm mỹ cao.
+SKILLS:
+- Core Expertise: JavaScript (ES6+), TypeScript, HTML5, CSS3, Tailwind CSS.
+- Framework/Library: ReactJS (Hooks, Redux Toolkit, Context API), Next.js (App Router, Server Actions, Server-Side Rendering).
+- Tools: Git, VSCode, Figma, Webpack, ESLint, Postman.
+- Soft Skills: Scrum/Agile teamwork, effective problem solving, strong aesthetic mindset.
 
-KINH NGHIỆM LÀM VIỆC:
-1. Lập trình viên Frontend - Công ty Công nghệ DigiTech (Tháng 12/2024 - Nay)
-- Chịu trách nhiệm chính xây dựng các tính năng cốt lõi cho nền tảng thương mại điện tử với hơn 10,000 người dùng hàng ngày.
-- Sử dụng Next.js kết hợp với Tailwind CSS để cải thiện điểm số Google PageSpeed Insights từ 65 lên 90+.
-- Code cấu trúc nguyên lý Modular Component để tái sử dụng tối đa, giúp giảm 25% thời gian phát triển các module tương lai.
-- Làm việc và tích hợp API RESTful đồng bộ trạng thái thanh toán thông qua Redux Toolkit.
+WORK EXPERIENCE:
+1. Frontend Developer - DigiTech Technology Co. (Dec 2024 - Present)
+- Responsible for building core features for an E-commerce platform serving over 10,000 daily users.
+- Leverage Next.js combined with Tailwind CSS to improve Google PageSpeed Insights score from 65 to 90+.
+- Architected a Modular Component structure for maximum reusability, reducing development time for future modules by 25%.
+- Integrated RESTful APIs, synchronizing payment states via Redux Toolkit.
 
-2. Lập trình viên ReactJS - StarUp Innovation (Tháng 08/2023 - Tháng 11/2024)
-- Thiết kế và phát triển Hệ thống Dashboard quản trị doanh nghiệp nội bộ.
-- Chuyển đổi và bám sát pixel-perfect 40+ màn hình từ thiết kế Figma phức tạp sang CSS sạch sẽ.
-- Tối ưu hóa hiệu suất render, áp dụng lazy loading, useMemo và useCallback hiệu quả giúp giảm 15% thời gian phản hồi trang.
+2. ReactJS Developer - StarUp Innovation (Aug 2023 - Nov 2024)
+- Designed and developed an internal enterprise management Dashboard System.
+- Successfully converted 40+ complex Figma screens to pixel-perfect, clean CSS.
+- Optimized rendering performance using lazy loading, useMemo, and useCallback, reducing page response time by 15%.
 
-HỌC VẤN:
-Cử nhân Công nghệ thông tin (Chuyên ngành Phát triển Phần Mềm)
-Trường Đại học Khoa học Tự nhiên - ĐHQG TP.HCM (Niên khóa 2019 - 2023)`
+EDUCATION:
+Bachelor of Information Technology (Software Development Major)
+University of Science - VNU-HCM (2019 - 2023)`
   },
   {
     id: "sample-cv-ba-giang",
-    name: "Trần Thị Hương Giang",
+    name: "Tran Thi Huong Giang",
     fileName: "CV_TranThiHuongGiang_BusinessAnalyst.txt",
     fileType: "text",
-    textContent: `TRẦN THỊ HƯƠNG GIANG
-Vị trí ứng tuyển: Business Analyst (BA) / Product Specialist
+    textContent: `TRAN THI HUONG GIANG
+Target Position: Business Analyst (BA) / Product Specialist
 Hotline: 0912.345.678
 Email: huonggiang.ba@gmail.com
 LinkedIn: linkedin.com/in/giangba3012
-Trú quán: Quận Thanh Xuân, Hà Nội
+Address: Thanh Xuan District, Hanoi
 
-GIỚI THIỆU CHUNG:
-Chuyên viên Phân tích nghiệp vụ (Business Analyst) với gần 4 năm thành công trong các dự án phần mềm Quản lý Tài chính (FinTech) và Giải pháp Quản trị nhân sự (HRTech). Có thế mạnh đặc biệt trong việc khơi gợi yêu cầu khách hàng, soạn thảo tài liệu đặc tả nghiệp vụ chi tiết (SRS) và làm cầu nối nhịp nhàng giúp Developer triển khai đúng kỳ vọng sản phẩm.
+INTRODUCTION:
+Business Analyst with nearly 4 years of success in FinTech and HRTech projects. Exceptional strength in requirements elicitation, drafting detailed Business Requirement Specifications (SRS), and acting as a bridge to ensure Developers deliver on product expectations.
 
-KỸ NĂNG CỐT LÕI:
-- Nghiệp vụ BA: Thu thập yêu cầu (Elicitation), Phân tích nghiệp vụ, Viết tài liệu SRS, User Story, Kịch bản kiểm thử (UAT).
-- Công cụ sơ đồ: Draw.io, Visio, Lucidchart, Figma (Wireframe & Prototype cơ bản).
-- Công cụ quản lý: Jira, Confluence, Trello, Redmine.
-- Cơ sở dữ liệu: Viết các câu truy vấn SQL cơ bản (SELECT, JOIN, WHERE, GROUP BY) phục vụ phân tích số liệu.
-- Kỹ năng mềm: Giao tiếp, làm việc nhóm, thuyết trình thuyết phục, giải quyết xung đột ý kiến.
+CORE SKILLS:
+- BA Tasks: Requirement Elicitation, Business Analysis, writing SRS, User Story, UAT Scenarios.
+- Diagramming Tools: Draw.io, Visio, Lucidchart, Figma (basic Wireframe & Prototype).
+- Management Tools: Jira, Confluence, Trello, Redmine.
+- Databases: Basic SQL queries (SELECT, JOIN, WHERE, GROUP BY) for data analysis.
+- Soft Skills: Communication, teamwork, persuasive presentation, conflict resolution.
 
-KINH NGHIỆM LÀM VIỆC THỰC TẾ:
-1. Chuyên viên BA - Công ty Cổ phần Giải pháp Tài chính FinOS (Tháng 05/2024 - Nay)
-- Đảm nhận vai trò BA duy nhất cho dự án Ví điện tử liên kết ngân hàng.
-- Tổ chức 30+ buổi hội thảo trực tiếp thu thập chi tiết yêu cầu người dùng từ các phòng ban giao dịch tài chính.
-- Thiết kế 50+ tài liệu sơ đồ luồng quy trình (UML Use Case, Activity, Sequence) giúp đội ngũ Dev tiết kiệm 20% thời gian phân tích logic code.
-- Phối hợp với QA lập kịch bản Test Case và trực tiếp hướng dẫn khách hàng nghiệm thu UAT sản phẩm.
+PROFESSIONAL EXPERIENCE:
+1. BA Specialist - FinOS Financial Solutions (May 2024 - Present)
+- Sole BA for a bank-linked E-wallet project.
+- Organized 30+ workshops to gather detailed user requirements from financial trading departments.
+- Designed 50+ UML process diagrams (Use Case, Activity, Sequence) helping the Dev team save 20% in logic analysis time.
+- Coordinated with QA to set up Test Cases and directly guided clients through UAT acceptance.
 
-2. Chuyên viên Phân tích nghiệp vụ - SmartTech Software (Tháng 02/2022 - Tháng 04/2024)
-- Thu thập yêu cầu và viết SRS cho Module Chấm công tự động dự án ERP doanh nghiệp.
-- Quản trị tốt backlog dự án trên Jira, lập kế hoạch Sprint kết hợp chặt chẽ với Product Owner và Scrum Master.
-- Phát hiện kịp thời 15+ rủi ro sai sót nghiệp vụ tính lương giúp tiết kiệm cho chủ đầu tư hàng trăm triệu đồng điều chỉnh mã nguồn muộn.
+2. Business Analyst - SmartTech Software (Feb 2022 - Apr 2024)
+- Gathered requirements and drafted SRS for an automated Timekeeping Module in an enterprise ERP project.
+- Managed project backlog on Jira, planned Sprints in close cooperation with Product Owner and Scrum Master.
+- Identified 15+ business logic errors in payroll calculations, saving stakeholders hundreds of millions of VND by preventing late code adjustments.
 
-HỌC VẤN & CHỨNG CHỈ:
-- Cử nhân Hệ thống Thông tin Quản lý (MIS) - Đại học Bách khoa Hà Nội (Bằng Khá, 2018 - 2022)
-- Khóa đào tạo Business Analyst chuyên sâu tại Viện Đào Tạo BAC.
-- Chứng chỉ tiếng Anh: IELTS 6.5.`
+EDUCATION & CERTIFICATIONS:
+- Bachelor of Management Information Systems (MIS) - Hanoi University of Science and Technology (GPA: Good, 2018 - 2022)
+- Specialized Business Analyst Training at BAC Institute.
+- English Certificate: IELTS 6.5.`
   },
   {
     id: "sample-cv-ai-nam",
-    name: "Phạm Hoàng Nam",
+    name: "Pham Hoang Nam",
     fileName: "CV_PhamHoangNam_AI_Fresh.txt",
     fileType: "text",
-    textContent: `THÔNG TIN CÁ NHÂN: PHẠM HOÀNG NAM
-Vị trí ứng tuyển: Kỹ sư Trí tuệ nhân tạo (AI/ML Engineer) / Data Scientist
-SĐT: 0399.888.777
+    textContent: `PERSONAL INFORMATION: PHAM HOANG NAM
+Target Position: AI/ML Engineer / Data Scientist
+Phone: 0399.888.777
 Email: nam.phamhoang@outlook.com
-Địa chỉ: Cầu Giấy, Hà Nội
+Address: Cau Giay, Hanoi
 
-MỤC TIÊU SỰ NGHIỆP:
-Kỹ sư AI trẻ trung, giàu đam mê nghiên cứu cấu trúc mạng Neural và các dòng Generative AI mới nhất. Mục tiêu áp dụng sâu sắc lý thuyết học sâu vào xây dựng các công nghệ thực dụng: xử lý văn bản tiếng Việt tự động và thị giác máy tính.
+CAREER OBJECTIVE:
+Ambitious junior AI Engineer with a keen interest in researching Neural Network structures and the latest Generative AI models. Aim to deeply apply deep learning theory to practical technologies: automatic Vietnamese text processing and computer vision.
 
-KỸ NĂNG CHUYÊN MÔN:
-- Ngôn ngữ lập trình: Python, C++, SQL.
+TECHNICAL SKILLS:
+- Languages: Python, C++, SQL.
 - Machine Learning & Deep Learning: PyTorch, TensorFlow, Scikit-learn, HuggingFace Transformers.
-- Lĩnh vực chuyên môn: Học máy tự động, NLP (Xử lý ngôn ngữ tự nhiên), kết nối tài nguyên Vector Database (ChromaDB), RAG cơ bản.
-- Công nghệ bổ trợ: Git, Docker cơ bản, RESTful API (Flask).
+- Expertise: Automated Machine Learning, NLP (Natural Language Processing), Vector Database connectivity (ChromaDB), basic RAG.
+- Tools: Git, Basic Docker, RESTful API (Flask).
 
-DỰ ÁN CÁ NHÂN & KINH NGHIỆM:
-1. Kỹ sư thực tập AI - Viện Nghiên cứu Trí tuệ nhân tạo VAI (Tháng 09/2025 - Nay)
-- Hỗ trợ triển khai hệ thống chatbot nội bộ dựa trên dữ liệu tri thức của tổ chức (RAG) sử dụng LlamaIndex và ChatGPT API.
-- Chuẩn hóa dữ liệu văn bản thô tiếng Việt (Data Preprocessing), viết regex làm sạch văn bản và phân loại cảm xúc phản hồi người dùng.
-- Trực tiếp triển khai lưu trữ nhúng (embedding) văn bản vào cơ sở dữ liệu ChromaDB.
+EXPERIENCE & PROJECTS:
+1. AI Research Intern - VAI Research Institute (Sep 2025 - Present)
+- Supported the deployment of an internal chatbot based on organizational knowledge (RAG) using LlamaIndex and ChatGPT API.
+- Preprocessed Vietnamese raw text data using regex for cleaning and user sentiment classification.
+- Directly deployed text embedding storage into ChromaDB.
 
-2. Đồ án tốt nghiệp xuất sắc: Xây dựng hệ thống phát hiện biển báo giao thông thời gian thực (Năm 2025)
-- Thu thập và phân loại thủ công tập dữ liệu 5,000+ ảnh biển báo giao thông Việt Nam.
-- Huấn luyện mô hình YOLOv8 trên tập dữ liệu này bằng thư viện PyTorch, đạt độ chính xác mAP@0.5 lên tới 92%.
-- Viết ứng dụng demo giao diện Web phục vụ nhận diện trực quan qua camera bằng thư viện Streamlit.
+2. Outstanding Graduation Project: Real-time traffic sign detection system (2025)
+- Manually collected and classified a dataset of 5,000+ Vietnamese traffic sign images.
+- Trained YOLOv8 model using PyTorch, achieving mAP@0.5 up to 92%.
+- Created a demo Web UI for real-time detection via camera using Streamlit.
 
-HỌC VẤN:
-Cử nhân Tài chính - Toán Tin (Chương trình tiên tiến CLC)
-Trường Đại học Bách khoa Hà Nội (Khóa 2021 - 2025)
-Điểm trung bình (GPA): 3.65 / 4.0 (Đạt học bổng khuyến khích học tập 3 kỳ liên tiếp)`
+EDUCATION:
+Bachelor of Finance - Math-Informatics (Advanced Program)
+Hanoi University of Science and Technology (2021 - 2025)
+GPA: 3.65 / 4.0 (3 consecutive semesters of merit scholarships)`
   }
 ];

@@ -160,18 +160,18 @@ export default function CandidateList({
   };
 
   return (
-    <div className="bg-[#F9F7F2] border-2 border-[#1A1A1A] p-6 flex flex-col h-full" id="candidate-list-panel">
+    <div className="bg-white border border-slate-200 p-6 flex flex-col h-full rounded-xl shadow-sm" id="candidate-list-panel">
       
-      {/* Header block with Editorial Title */}
-      <div className="flex items-baseline justify-between border-b pb-3 border-[#1A1A1A] mb-4">
+      {/* Header block */}
+      <div className="flex items-baseline justify-between border-b border-slate-100 pb-3 mb-4">
         <div>
-          <span className="text-[9px] font-bold uppercase tracking-[0.2em] text-[#1A1A1A]/60 block mb-1">SECTION II // TALENT FILES</span>
-          <h2 className="font-serif font-black text-xl text-[#1A1A1A] tracking-tight">Candidate Profiles (CV)</h2>
+          <span className="text-[9px] font-bold uppercase tracking-[0.2em] text-slate-500 block mb-1">SECTION II // TALENT FILES</span>
+          <h2 className="font-serif font-black text-xl text-slate-900 tracking-tight">Candidate Profiles (CV)</h2>
         </div>
         {candidates.length > 0 && (
           <button
             onClick={handleClearAll}
-            className="text-[10px] font-bold uppercase tracking-wider text-[#1A1A1A] border border-[#1A1A1A] hover:bg-rose-100 hover:text-rose-700 px-2 py-1 transition cursor-pointer"
+            className="text-[10px] font-bold uppercase tracking-wider text-slate-500 border border-slate-200 hover:bg-rose-50 hover:text-rose-700 px-2 py-1 transition cursor-pointer rounded"
           >
             Clear All
           </button>
@@ -182,7 +182,7 @@ export default function CandidateList({
       <div className="mb-4">
         <button
           onClick={handleLoadSamples}
-          className="w-full bg-[#1A1A1A] text-white hover:bg-white hover:text-[#1A1A1A] border-2 border-[#1A1A1A] py-2.5 px-4 text-xs font-bold uppercase tracking-widest transition duration-200 cursor-pointer flex items-center justify-center gap-2"
+          className="w-full bg-indigo-600 text-white hover:bg-indigo-700 border border-indigo-700 py-2.5 px-4 text-xs font-bold uppercase tracking-widest transition duration-200 cursor-pointer flex items-center justify-center gap-2 rounded-lg shadow-sm"
           id="btn-load-samples"
         >
           <Sparkles className="w-4 h-4" />
@@ -190,17 +190,17 @@ export default function CandidateList({
         </button>
       </div>
 
-      {/* Editorial Styled Drag & Drop File Container */}
+      {/* Drag & Drop File Container */}
       <div
         onDragEnter={handleDrag}
         onDragOver={handleDrag}
         onDragLeave={handleDrag}
         onDrop={handleDrop}
         onClick={() => fileInputRef.current?.click()}
-        className={`border-2 border-dashed p-5 text-center transition cursor-pointer flex flex-col items-center justify-center gap-1 bg-white ${
+        className={`border-2 border-dashed p-5 text-center transition cursor-pointer flex flex-col items-center justify-center gap-1 rounded-lg ${
           dragActive
-            ? "border-amber-600 bg-[#F5E6CC]/30"
-            : "border-[#1A1A1A] hover:bg-[#F5E6CC]/20"
+            ? "border-indigo-400 bg-indigo-50"
+            : "border-slate-300 hover:bg-slate-50 hover:border-indigo-300"
         }`}
         id="cv-upload-area"
       >
@@ -212,21 +212,21 @@ export default function CandidateList({
           onChange={handleChange}
           className="hidden"
         />
-        <div className="w-9 h-9 border border-[#1A1A1A] bg-[#F9F7F2] flex items-center justify-center text-[#1A1A1A]">
+        <div className="w-9 h-9 border border-slate-200 bg-white rounded flex items-center justify-center text-indigo-600">
           <UploadCloud className="w-4 h-4" />
         </div>
         <div>
-          <p className="text-xs font-bold uppercase tracking-wide text-[#1A1A1A]">Select or drop files here</p>
-          <p className="text-[10px] text-[#1A1A1A]/70 font-mono mt-0.5">SUPPORTED: PDF, TXT, MD</p>
+          <p className="text-xs font-bold uppercase tracking-wide text-slate-700">Select or drop files here</p>
+          <p className="text-[10px] text-slate-400 font-mono mt-0.5">SUPPORTED: PDF, TXT, MD</p>
         </div>
       </div>
 
       {/* List content */}
       <div className="flex-1 overflow-y-auto mt-4 max-h-[360px] pr-1 space-y-2.5">
         {candidates.length === 0 ? (
-          <div className="text-center py-10 text-[#1A1A1A]/60 flex flex-col items-center justify-center h-full border border-dashed border-[#1A1A1A]/40 bg-white/40">
-            <FileText className="w-8 h-8 text-[#1A1A1A]/30 mb-2" />
-            <p className="text-xs font-bold uppercase tracking-widest">No candidates loaded</p>
+          <div className="text-center py-10 text-slate-400 flex flex-col items-center justify-center h-full border border-dashed border-slate-200 rounded-lg bg-slate-50/50">
+            <FileText className="w-8 h-8 text-slate-300 mb-2" />
+            <p className="text-xs font-bold uppercase tracking-widest text-slate-500">No candidates loaded</p>
             <p className="text-[10px] italic font-serif mt-1 max-w-[200px]">Drop CV files or use sample candidates button above.</p>
           </div>
         ) : (
@@ -234,10 +234,10 @@ export default function CandidateList({
             {candidates.map((cand) => {
               const isSelected = selectedCandidateId === cand.id;
               
-              let statusBorder = "border-[#1A1A1A]/40 bg-white";
-              if (cand.status === "scanning") statusBorder = "border-amber-600 bg-[#F5E6CC]/20";
-              else if (cand.status === "error") statusBorder = "border-rose-400 bg-rose-50";
-              else if (isSelected) statusBorder = "border-2 border-[#1A1A1A] bg-[#F5E6CC]/45";
+              let statusClass = "border-slate-200 bg-white";
+              if (cand.status === "scanning") statusClass = "border-amber-300 bg-amber-50";
+              else if (cand.status === "error") statusClass = "border-rose-200 bg-rose-50";
+              else if (isSelected) statusClass = "border-2 border-indigo-500 bg-indigo-50/50";
 
               return (
                 <motion.div
@@ -245,58 +245,58 @@ export default function CandidateList({
                   initial={{ opacity: 0, y: 10 }}
                   animate={{ opacity: 1, y: 0 }}
                   exit={{ opacity: 0, x: -10 }}
-                  className={`border p-3 flex items-center justify-between transition cursor-pointer select-none ${statusBorder} ${
-                    isSelected ? "shadow-[2px_2px_0px_0px_rgba(26,26,26,1)]" : "hover:border-[#1A1A1A]"
+                  className={`border p-3 flex items-center justify-between transition cursor-pointer select-none rounded-lg ${statusClass} ${
+                    isSelected ? "shadow-sm" : "hover:border-indigo-200"
                   }`}
                   onClick={() => setSelectedCandidateId(cand.id)}
                 >
                   <div className="flex items-center gap-2.5 min-w-0 flex-1">
-                    <div className={`p-1.5 border border-[#1A1A1A] bg-white ${
-                      cand.fileType === "pdf" ? "text-rose-700" : "text-[#1A1A1A]"
+                    <div className={`p-1.5 border border-slate-200 bg-white rounded ${
+                      cand.fileType === "pdf" ? "text-rose-600" : "text-slate-600"
                     }`}>
                       <FileText className="w-3.5 h-3.5" />
                     </div>
 
                     <div className="min-w-0 flex-1">
                       <div className="flex items-center justify-between">
-                        <h4 className="font-serif font-black text-xs text-[#1A1A1A] truncate max-w-[140px]">
+                        <h4 className="font-serif font-black text-xs text-slate-900 truncate max-w-[140px]">
                           {cand.results?.candidateName || cand.fileName}
                         </h4>
                         {cand.size && (
-                          <span className="text-[8px] text-[#1A1A1A]/50 font-mono">({cand.size})</span>
+                          <span className="text-[8px] text-slate-400 font-mono">({cand.size})</span>
                         )}
                       </div>
 
                       <div className="flex items-center gap-1.5 mt-1">
                         {cand.status === "idle" && (
-                          <span className="text-[9px] font-bold uppercase tracking-wider text-[#1A1A1A]/70 bg-[#F9F7F2] border border-[#1A1A1A]/30 px-1 py-0.2">
+                          <span className="text-[9px] font-bold uppercase tracking-wider text-slate-500 bg-slate-100 border border-slate-200 px-1 py-0.2 rounded">
                             Pending
                           </span>
                         )}
                         {cand.status === "scanning" && (
-                          <span className="text-[9px] font-serif font-bold text-amber-900 bg-amber-100 border border-amber-400 px-1 py-0.2 flex items-center gap-1 animate-pulse">
+                          <span className="text-[9px] font-serif font-bold text-amber-900 bg-amber-100 border border-amber-300 px-1 py-0.2 flex items-center gap-1 animate-pulse rounded">
                             <Loader2 className="w-3 h-3 animate-spin" />
                             Processing...
                           </span>
                         )}
                         {cand.status === "success" && cand.results && (
                           <div className="flex items-center gap-1.5">
-                            <span className={`text-[9px] font-bold uppercase tracking-tighter px-1.5 py-0.2 border border-[#1A1A1A] ${
+                            <span className={`text-[9px] font-bold uppercase tracking-tighter px-1.5 py-0.2 border rounded ${
                               cand.results.recommendation === "Suitable"
-                                ? "bg-[#E1F2E5] text-emerald-800"
+                                ? "bg-emerald-50 text-emerald-800 border-emerald-200"
                                 : cand.results.recommendation === "Consider"
-                                ? "bg-[#F5E6CC] text-amber-950"
-                                : "bg-rose-100 text-rose-800"
+                                ? "bg-amber-50 text-amber-900 border-amber-200"
+                                : "bg-rose-50 text-rose-800 border-rose-200"
                             }`}>
                               {cand.results.recommendation}
                             </span>
-                            <span className="text-[9px] font-mono font-bold text-[#1A1A1A]">
+                            <span className="text-[9px] font-mono font-bold text-indigo-700">
                               {cand.results.matchScore}% MATCH
                             </span>
                           </div>
                         )}
                         {cand.status === "error" && (
-                          <span className="text-[9px] font-bold text-rose-800 bg-rose-100 border border-rose-300 px-1 py-0.2 flex items-center gap-0.5">
+                          <span className="text-[9px] font-bold text-rose-800 bg-rose-50 border border-rose-200 px-1 py-0.2 flex items-center gap-0.5 rounded">
                             <AlertCircle className="w-2.5 h-2.5" />
                             Error
                           </span>
@@ -314,7 +314,7 @@ export default function CandidateList({
                           onScreenSingleCandidate(cand.id);
                         }}
                         disabled={isAnyScanning}
-                        className={`text-white bg-[#1A1A1A] hover:bg-white hover:text-[#1A1A1A] border border-[#1A1A1A] p-0.5 transition duration-200 cursor-pointer ${
+                        className={`text-indigo-600 bg-indigo-50 hover:bg-indigo-600 hover:text-white border border-indigo-200 rounded p-1 transition duration-200 cursor-pointer ${
                           isAnyScanning ? "opacity-30 pointer-events-none" : ""
                         }`}
                         title="Start candidate screening"
@@ -327,7 +327,7 @@ export default function CandidateList({
                     {/* Trash buttons */}
                     <button
                       onClick={(e) => handleDeleteCandidate(cand.id, e)}
-                      className="text-[#1A1A1A]/40 hover:text-rose-700 p-1.5 hover:bg-white/70 transition ml-1 cursor-pointer"
+                      className="text-slate-400 hover:text-rose-600 p-1.5 hover:bg-rose-50 transition ml-1 cursor-pointer rounded"
                       title="Delete profile"
                       type="button"
                     >
@@ -341,7 +341,7 @@ export default function CandidateList({
         )}
       </div>
 
-      <div className="mt-auto pt-3 border-t border-[#1A1A1A]/20 text-[9px] text-[#1A1A1A]/60 italic font-serif">
+      <div className="mt-auto pt-3 border-t border-slate-100 text-[9px] text-slate-400 italic font-serif">
         * Click the arrow button of an individual candidate to screen, or use the mass screening button in the dashboard to analyze all candidates.
       </div>
     </div>

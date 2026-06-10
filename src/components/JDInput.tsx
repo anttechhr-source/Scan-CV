@@ -26,22 +26,22 @@ export default function JDInput({
   const wordCount = jdText.trim() ? jdText.trim().split(/\s+/).length : 0;
 
   return (
-    <div className="bg-[#F9F7F2] border-2 border-[#1A1A1A] p-6 flex flex-col h-full" id="jd-input-panel">
+    <div className="bg-white border border-slate-200 p-6 flex flex-col h-full rounded-xl shadow-sm" id="jd-input-panel">
       {/* Header Info */}
-      <div className="flex items-baseline justify-between border-b pb-3 border-[#1A1A1A] mb-4">
+      <div className="flex items-baseline justify-between border-b border-slate-100 pb-3 mb-4">
         <div>
-          <span className="text-[9px] font-bold uppercase tracking-[0.2em] text-[#1A1A1A]/60 block mb-1">SECTION I // REQUIREMENT</span>
-          <h2 className="font-serif font-black text-xl text-[#1A1A1A] tracking-tight">Job Description (JD)</h2>
+          <span className="text-[9px] font-bold uppercase tracking-[0.2em] text-slate-500 block mb-1">SECTION I // REQUIREMENT</span>
+          <h2 className="font-serif font-black text-xl text-slate-900 tracking-tight">Job Description (JD)</h2>
         </div>
-        <span className="text-[10px] font-bold font-mono text-white bg-[#1A1A1A] px-2 py-0.5 tracking-wider uppercase">
+        <span className="text-[10px] font-bold font-mono text-white bg-indigo-600 rounded px-2 py-0.5 tracking-wider uppercase">
           {wordCount} Words
         </span>
       </div>
 
       {/* Quick Select Buttons */}
       <div className="mb-5">
-        <label className="text-[10px] font-bold uppercase tracking-widest text-[#1A1A1A] mb-2.5 block flex items-center gap-1">
-          <Sparkles className="w-3.5 h-3.5 text-[#1A1A1A]" />
+        <label className="text-[10px] font-bold uppercase tracking-widest text-slate-500 mb-2.5 block flex items-center gap-1">
+          <Sparkles className="w-3.5 h-3.5 text-indigo-500" />
           <span>Quick Selection Templates:</span>
         </label>
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-2">
@@ -49,10 +49,10 @@ export default function JDInput({
             <button
               key={tpl.id}
               onClick={() => handleSelectTemplate(tpl.id)}
-              className={`text-left p-3 transition-all duration-200 border cursor-pointer ${
+              className={`text-left p-3 transition-all duration-200 border cursor-pointer rounded-lg ${
                 selectedJdId === tpl.id
-                  ? "bg-[#1A1A1A] border-[#1A1A1A] text-[#F9F7F2] font-bold"
-                  : "bg-white border-[#1A1A1A] hover:bg-[#F5E6CC]/40 text-[#1A1A1A]/80 text-xs"
+                  ? "bg-indigo-600 border-indigo-600 text-white font-bold"
+                  : "bg-slate-50 border-slate-100 hover:border-indigo-200 hover:bg-slate-100 text-slate-700 text-xs"
               }`}
               type="button"
             >
@@ -72,13 +72,13 @@ export default function JDInput({
             setSelectedJdId(""); // reset
           }}
           placeholder="Paste detailed job description (JD) here..."
-          className="w-full flex-1 p-4 bg-white text-[#1A1A1A] text-sm border-2 border-[#1A1A1A] focus:outline-hidden focus:ring-1 focus:ring-[#1A1A1A] transition resize-none font-sans leading-relaxed"
+          className="w-full flex-1 p-4 bg-slate-50 text-slate-900 text-sm border border-slate-200 rounded-lg focus:outline-none focus:ring-1 focus:ring-indigo-500 transition resize-none font-sans leading-relaxed"
           id="jd-textarea"
         />
       </div>
 
       <div className="mt-3 flex items-start gap-1 pb-1">
-        <span className="text-[10px] leading-relaxed italic text-[#1A1A1A]/70 font-serif">
+        <span className="text-[10px] leading-relaxed italic text-slate-400 font-serif">
           * You can edit JD content directly to ensure AI analysis is precise.
         </span>
       </div>

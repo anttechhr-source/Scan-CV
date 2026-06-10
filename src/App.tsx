@@ -154,29 +154,29 @@ Chúng tôi đang tìm kiếm Lập trình viên Frontend (ReactJS / Next.js) gi
   const isAnyScanning = candidates.some((c) => c.status === "scanning");
 
   return (
-    <div className="w-full bg-[#FAF9F5] text-[#1A1A1A] font-sans min-h-screen flex flex-col antialiased">
+    <div className="w-full bg-slate-50 text-slate-900 font-sans min-h-screen flex flex-col antialiased">
       
-      {/* Decorative Editorial Border Header Accent */}
-      <div className="h-1.5 bg-[#1A1A1A]" />
+      {/* Editorial Header Accent */}
+      <div className="h-1.5 bg-indigo-600" />
 
-      {/* Main Newspaper Style Header */}
-      <header className="px-6 md:px-12 py-6 border-b border-[#1A1A1A] bg-[#F9F7F2] flex flex-col md:flex-row justify-between items-baseline gap-4">
+      {/* Header */}
+      <header className="px-6 md:px-12 py-6 border-b border-indigo-100 bg-white flex flex-col md:flex-row justify-between items-baseline gap-4">
         <div>
-          <h1 className="text-4xl md:text-5xl font-serif font-black tracking-tighter uppercase flex items-center gap-1">
-            CV/MATCH <span className="font-serif italic font-normal text-3xl lowercase">intelligence</span>
+          <h1 className="text-4xl md:text-5xl font-serif font-black tracking-tighter uppercase flex items-center gap-1 text-indigo-950">
+            CV/MATCH <span className="font-serif italic font-normal text-3xl lowercase text-indigo-600">intelligence</span>
           </h1>
-          <p className="text-[10px] md:text-xs font-bold uppercase tracking-[0.2em] text-[#1A1A1A]/70 mt-1">
+          <p className="text-[10px] md:text-xs font-bold uppercase tracking-[0.2em] text-slate-500 mt-1">
             AI-POWERED AUTOMATED CV/JD MATCHING & SCREENING SYSTEM
           </p>
         </div>
         
         {/* Statistics & Meta info banner */}
-        <div className="flex gap-8 text-[11px] font-bold uppercase tracking-widest text-[#1A1A1A] self-end md:self-auto">
+        <div className="flex gap-8 text-[11px] font-bold uppercase tracking-widest text-slate-600 self-end md:self-auto">
           <div className="flex items-center gap-1.5">
-            <span className="w-2 h-2 rounded-full bg-emerald-600 animate-pulse" />
+            <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
             <span>AI ENGINE ONLINE</span>
           </div>
-          <div className="text-[#1A1A1A]/60">
+          <div className="text-slate-400">
             SYSTEM VERSION // 3.5.FL
           </div>
         </div>
@@ -186,10 +186,10 @@ Chúng tôi đang tìm kiếm Lập trình viên Frontend (ReactJS / Next.js) gi
       <main className="flex-1 flex flex-col lg:flex-row min-h-0 border-b border-[#1A1A1A]">
         
         {/* Left column sidebar for Inputs (JD + File List) */}
-        <aside className="w-full lg:w-[380px] border-r-0 lg:border-r border-[#1A1A1A] flex flex-col bg-[#F9F7F2] flex-shrink-0">
+        <aside className="w-full lg:w-[380px] border-r border-slate-200 flex flex-col bg-slate-50 flex-shrink-0">
           
           {/* Section 1: JD Input Panel */}
-          <div className="p-4 md:p-6 border-b border-[#1A1A1A] flex-1">
+          <div className="p-4 md:p-6 border-b border-slate-200 flex-1">
             <JDInput
               jdText={jdText}
               setJdText={setJdText}
@@ -212,29 +212,29 @@ Chúng tôi đang tìm kiếm Lập trình viên Frontend (ReactJS / Next.js) gi
         </aside>
 
         {/* Right column: Primary Display Results Dashboard */}
-        <section className="flex-1 p-4 md:p-8 flex flex-col bg-white overflow-y-auto">
+        <section className="flex-1 p-4 md:p-8 flex flex-col bg-slate-50 overflow-y-auto">
           
           {/* Action Header bar (Core control center) */}
-          <div className="flex flex-col md:flex-row justify-between items-start md:items-center border-b pb-4 border-[#1A1A1A] mb-6 gap-4">
+          <div className="flex flex-col md:flex-row justify-between items-start md:items-center border-b pb-4 border-slate-200 mb-6 gap-4">
             
             {/* Elegant tabs indicator */}
             <div className="flex gap-2">
               <button
                 onClick={() => setActiveTab("analysis")}
-                className={`px-4 py-2 text-xs font-bold uppercase tracking-widest border transition duration-200 cursor-pointer ${
+                className={`px-4 py-2 text-xs font-bold uppercase tracking-widest border transition duration-200 cursor-pointer rounded-md ${
                   activeTab === "analysis"
-                    ? "bg-[#1A1A1A] text-[#F9F7F2] border-[#1A1A1A] shadow-[2px_2px_0px_0px_rgba(26,26,26,0.3)]"
-                    : "bg-white text-[#1A1A1A] border-[#1A1A1A]/30 hover:border-[#1A1A1A]"
+                    ? "bg-indigo-600 text-white border-indigo-600 shadow-sm"
+                    : "bg-white text-slate-700 border-slate-200 hover:border-indigo-200"
                 }`}
               >
                 Analysis Details
               </button>
               <button
                 onClick={() => setActiveTab("matrix")}
-                className={`px-4 py-2 text-xs font-bold uppercase tracking-widest border transition duration-200 cursor-pointer ${
+                className={`px-4 py-2 text-xs font-bold uppercase tracking-widest border transition duration-200 cursor-pointer rounded-md ${
                   activeTab === "matrix"
-                    ? "bg-[#1A1A1A] text-[#F9F7F2] border-[#1A1A1A] shadow-[2px_2px_0px_0px_rgba(26,26,26,0.3)]"
-                    : "bg-white text-[#1A1A1A] border-[#1A1A1A]/30 hover:border-[#1A1A1A]"
+                    ? "bg-indigo-600 text-white border-indigo-600 shadow-sm"
+                    : "bg-white text-slate-700 border-slate-200 hover:border-indigo-200"
                 }`}
               >
                 Comparison Matrix ({candidates.filter(c => c.status === "success").length})
@@ -246,18 +246,18 @@ Chúng tôi đang tìm kiếm Lập trình viên Frontend (ReactJS / Next.js) gi
               <button
                 onClick={handleScreenAll}
                 disabled={isAnyScanning}
-                className={`w-full md:w-auto text-xs font-bold uppercase tracking-widest border-2 border-[#1A1A1A] py-2.5 px-5 bg-gradient-to-r from-[#F5E6CC]/40 to-[#E1F2E5]/50 hover:bg-[#1A1A1A] hover:text-white transition duration-200 cursor-pointer flex items-center justify-center gap-2 ${
+                className={`w-full md:w-auto text-xs font-bold uppercase tracking-widest border border-indigo-600 py-2.5 px-5 bg-indigo-50 text-indigo-700 hover:bg-indigo-600 hover:text-white transition duration-200 cursor-pointer flex items-center justify-center gap-2 rounded-md ${
                   isAnyScanning ? "opacity-40 cursor-not-allowed" : ""
                 }`}
               >
                 {isAnyScanning ? (
                   <>
-                    <RefreshCw className="w-4 h-4 animate-spin text-[#1A1A1A]" />
+                    <RefreshCw className="w-4 h-4 animate-spin" />
                     <span>Screening in progress...</span>
                   </>
                 ) : (
                   <>
-                    <Sparkles className="w-4 h-4 text-amber-700" />
+                    <Sparkles className="w-4 h-4" />
                     <span>Screen all candidates ({candidates.filter(c => c.status !== "success").length})</span>
                   </>
                 )}

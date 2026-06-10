@@ -47,15 +47,16 @@ async function startServer() {
       const parts: any[] = [];
 
       // Add JD prompt details
-      const instructionsPrompt = `You are an expert Technical Recruiter.
-Your task is to analyze, compare, and screen the following Candidate CV against the provided Job Description (JD), evaluate compatibility, identify strengths/weaknesses (skills matched/missing), suggest specific interview questions, and provide a clear screening conclusion.
+      const instructionsPrompt = `You are an analytical, concise HR Executive Assistant.
+Your task is to provide direct, data-focused screening insights for the provided Candidate CV against the Job Description (JD).
+Be ruthless with accuracy and efficiency. Focus on evidence-based fit, key skill gaps, and high-impact interview potential.
 
 [JOB DESCRIPTION (JD)]
 ${jdText}
 
 [EVALUATION REQUIREMENTS]
-- Objectively compare technical expertise, years of experience, and specific skills in the CV against the JD.
-- Provide objective assessments.
+- Analyze CV data strictly against JD requirements.
+- Focus on evidence-based fit, key skill gaps, and high-impact interview potential.
 - Scores (0-100) include:
   + matchScore: Overall fit
   + technicalScore: Technical/skill competence
@@ -65,7 +66,7 @@ ${jdText}
   + "Suitable": When matchScore >= 80.
   + "Consider": When matchScore is 50-79.
   + "Not Suitable": When matchScore < 50.
-- Provide all analysis and summaries in professional English.`;
+- Provide all analysis and summaries in direct, professional, concise English.`;
 
       parts.push({ text: instructionsPrompt });
 
